@@ -1,0 +1,32 @@
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="sideover">
+      <button color="primary" mat-button routerLink="/clients">Clients</button>
+      <button color="primary" mat-button routerLink="/client_users">Client Users</button>
+      <button color="primary" mat-button routerLink="/users">Users</button>
+      <button color="primary" mat-button routerLink="/roles">Roles</button>
+      <button color="primary" mat-button routerLink="/permissions">Permissions</button>
+      <button color="primary" mat-button routerLink="/user_roles">User Roles</button>
+      <button color="primary" mat-button routerLink="/role_permissions">Role Permissions</button>
+  </mat-drawer>
+  <div class="sidenav-content">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <button mat-icon-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <span>Title</span>
+            <span class="spacer"></span>
+            <mat-icon>favorite</mat-icon>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+
+    <router-outlet></router-outlet>
+</div>
+</mat-drawer-container>
+
+
+
+
